@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Set the view's delegate
-      sceneView.delegate = self as? ARSCNViewDelegate
+        sceneView.delegate = self
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
@@ -76,4 +76,8 @@ class ViewController: UIViewController {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+}
+
+extension ViewController: ARSCNViewDelegate {
+  
 }

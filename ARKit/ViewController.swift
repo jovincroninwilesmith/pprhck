@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Set the view's delegate
-      sceneView.delegate = self as! ARSCNViewDelegate
+      sceneView.delegate = self as? ARSCNViewDelegate
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true

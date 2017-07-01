@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ARKit.xcodeproj">
+      location = "self:/Users/dimitryvin/Developer/Repos/pprhck/PaperAR.xcodeproj">
    </FileRef>
 </Workspace>

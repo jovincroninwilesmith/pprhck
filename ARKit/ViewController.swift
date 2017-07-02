@@ -8,8 +8,11 @@
 
 import UIKit
 import ARKit
+import Alamofire
+import SwiftyJSON
+import AlamofireSwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -23,10 +26,15 @@ class ViewController: UIViewController {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
         
         // Set the scene to the view
         sceneView.scene = scene
+        sceneView.scene.physicsWorld.contactDelegate = self
+        
+        self.addNewBar()
+        self.getCurrencyValues()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,8 +84,69 @@ class ViewController: UIViewController {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    
+    func getRemoteData(url: String, completion: @escaping ((_ json: DataResponse<JSON>) -> Void)) {
+        Alamofire.request(url).responseSwiftyJSON {
+            (response) in
+            completion(response)
+        }
+    }
+    
+    
+    func getCurrencyValues() {
+        var values = [String]()
+        
+        let dGroup = DispatchGroup()
+        
+        dGroup.enter()
+        getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/bitcoin/") { json in
+            values.append(json.value?.array?[0]["price_usd"])
+            dGroup.leave()
+        }
+        
+        
+        dGroup.enter()
+        getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/ethereum/") { json in
+            values.append(json.value?.array?[0]["price_usd"])
+            dGroup.leave()
+        }
+        
+        dGroup.enter()
+        getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/ripple/") { json in
+            values.append(json.value?.array?[0]["price_usd"])
+            dGroup.leave()
+        }
+        
+        dGroup.notify(queue: DispatchQueue.main) {
+            print("we are done")
+            print(values)
+        }
+    }
+    
+    
+    
+    
+    func determineBarHeight(){
+        
+    }
+    
+    
+    
+    func addNewBar() {
+        let barNode = Bar(height: 0.2)
+        let posX = floatBetween(-0.5, and: 0.5)
+        let posY = floatBetween(-0.5, and: 0.5  )
+        barNode.position = SCNVector3(posX, posY, -1) // SceneKit/AR coordinates are in meters
+        sceneView.scene.rootNode.addChildNode(barNode)
+    }
+    
+    func floatBetween(_ first: Float,  and second: Float) -> Float { // random float between upper and lower bound (inclusive)
+        return (Float(arc4random()) / Float(UInt32.max)) * (first - second) + second
+    }
+    
 }
 
-extension ViewController: ARSCNViewDelegate {
-  
-}
+
+
+

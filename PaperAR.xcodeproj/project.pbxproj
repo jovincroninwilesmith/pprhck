@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22A7CB691F08399700D030B4 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A7CB681F08397D00D030B4 /* ARKit.framework */; };
+		8142E6F11F08535B00ADF185 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8142E6F01F08535B00ADF185 /* Bar.swift */; };
 		8150C67C1F06FD7E004582D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150C67B1F06FD7E004582D8 /* AppDelegate.swift */; };
 		8150C67E1F06FD7E004582D8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8150C67D1F06FD7E004582D8 /* art.scnassets */; };
 		8150C6801F06FD7E004582D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150C67F1F06FD7E004582D8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		8150C6881F06FD7E004582D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8150C6861F06FD7E004582D8 /* LaunchScreen.storyboard */; };
 		8150C6931F06FD7E004582D8 /* ARKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150C6921F06FD7E004582D8 /* ARKitTests.swift */; };
 		8150C69E1F06FD7E004582D8 /* ARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150C69D1F06FD7E004582D8 /* ARKitUITests.swift */; };
+		DA99BF686B1FD77253E57D52 /* Pods_PaperAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D5EB48D5A67F958B1869F8 /* Pods_PaperAR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06F9A1129703419F45049D0E /* Pods-PaperAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperAR/Pods-PaperAR.debug.xcconfig"; sourceTree = "<group>"; };
 		22A7CB681F08397D00D030B4 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		23E2A3D16C9521201305D4F1 /* Pods-PaperAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperAR/Pods-PaperAR.release.xcconfig"; sourceTree = "<group>"; };
+		8142E6F01F08535B00ADF185 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		8150C6781F06FD7E004582D8 /* PaperAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150C67B1F06FD7E004582D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8150C67D1F06FD7E004582D8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		8150C6991F06FD7E004582D8 /* PaperARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8150C69D1F06FD7E004582D8 /* ARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitUITests.swift; sourceTree = "<group>"; };
 		8150C69F1F06FD7E004582D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D5EB48D5A67F958B1869F8 /* Pods_PaperAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A7CB691F08399700D030B4 /* ARKit.framework in Frameworks */,
+				DA99BF686B1FD77253E57D52 /* Pods_PaperAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +90,18 @@
 			isa = PBXGroup;
 			children = (
 				22A7CB681F08397D00D030B4 /* ARKit.framework */,
+				88D5EB48D5A67F958B1869F8 /* Pods_PaperAR.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		431935E1D81E50ABB990149E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06F9A1129703419F45049D0E /* Pods-PaperAR.debug.xcconfig */,
+				23E2A3D16C9521201305D4F1 /* Pods-PaperAR.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		8150C66F1F06FD7E004582D8 = {
@@ -95,6 +112,7 @@
 				8150C69C1F06FD7E004582D8 /* ARKitUITests */,
 				8150C6791F06FD7E004582D8 /* Products */,
 				22A7CB671F08397D00D030B4 /* Frameworks */,
+				431935E1D81E50ABB990149E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +136,7 @@
 				8150C6841F06FD7E004582D8 /* Assets.xcassets */,
 				8150C6861F06FD7E004582D8 /* LaunchScreen.storyboard */,
 				8150C6891F06FD7E004582D8 /* Info.plist */,
+				8142E6F01F08535B00ADF185 /* Bar.swift */,
 			);
 			path = ARKit;
 			sourceTree = "<group>";
@@ -147,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8150C6A21F06FD7E004582D8 /* Build configuration list for PBXNativeTarget "PaperAR" */;
 			buildPhases = (
+				E3E9D9C7C9118EBF2525545A /* [CP] Check Pods Manifest.lock */,
 				8150C6741F06FD7E004582D8 /* Sources */,
 				8150C6751F06FD7E004582D8 /* Frameworks */,
 				8150C6761F06FD7E004582D8 /* Resources */,
+				D40A98DA3E6D06E249411419 /* [CP] Embed Pods Frameworks */,
+				1AA43B62172B6FA038BE3DE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,12 +289,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AA43B62172B6FA038BE3DE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaperAR/Pods-PaperAR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40A98DA3E6D06E249411419 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaperAR/Pods-PaperAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E9D9C7C9118EBF2525545A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8150C6741F06FD7E004582D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8150C6801F06FD7E004582D8 /* ViewController.swift in Sources */,
+				8142E6F11F08535B00ADF185 /* Bar.swift in Sources */,
 				8150C67C1F06FD7E004582D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,9 +504,10 @@
 		};
 		8150C6A31F06FD7E004582D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06F9A1129703419F45049D0E /* Pods-PaperAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UB4S5M9D3W;
+				DEVELOPMENT_TEAM = U2WPRSWGKF;
 				INFOPLIST_FILE = ARKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PaperTriangles.ARProj;
@@ -447,9 +519,10 @@
 		};
 		8150C6A41F06FD7E004582D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E2A3D16C9521201305D4F1 /* Pods-PaperAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UB4S5M9D3W;
+				DEVELOPMENT_TEAM = U2WPRSWGKF;
 				INFOPLIST_FILE = ARKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PaperTriangles.ARProj;

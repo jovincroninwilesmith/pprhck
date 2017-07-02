@@ -101,20 +101,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         
         dGroup.enter()
         getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/bitcoin/") { json in
-            values.append(json.value?.array?[0]["price_usd"])
+            values.append(json.value?.array?[0]["price_usd"].string ?? "0")
             dGroup.leave()
         }
         
         
         dGroup.enter()
         getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/ethereum/") { json in
-            values.append(json.value?.array?[0]["price_usd"])
+            values.append(json.value?.array?[0]["price_usd"].string ?? "0")
             dGroup.leave()
         }
         
         dGroup.enter()
         getRemoteData(url: "https://api.coinmarketcap.com/v1/ticker/ripple/") { json in
-            values.append(json.value?.array?[0]["price_usd"])
+            values.append(json.value?.array?[0]["price_usd"].string ?? "0")
             dGroup.leave()
         }
         
